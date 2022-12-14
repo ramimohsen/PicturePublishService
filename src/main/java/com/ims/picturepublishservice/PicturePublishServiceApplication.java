@@ -30,25 +30,9 @@ public class PicturePublishServiceApplication {
 
     private static final Logger logger = LoggerFactory.getLogger(PicturePublishServiceApplication.class);
 
-
     public static void main(String[] args) {
         SpringApplication.run(PicturePublishServiceApplication.class, args);
     }
-
-//    @Bean
-//    public Docket api() {
-//
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .select()
-//                .apis(RequestHandlerSelectors.basePackage(getClass().getPackage().getName()))
-//                .paths(PathSelectors.any())
-//                .build()
-//                .apiInfo(new ApiInfo("Technical Assessment",
-//                        "Picture publishing", "1.0.0", "",
-//                        new Contact("IMS", "", ""),
-//                        "Apache 2.0", "https://www.apache.org/licenses/LICENSE-2.0"
-//                        , Collections.emptyList()));
-//    }
 
     @Bean
     CommandLineRunner runner(RoleService roleService, UserService userService, PasswordEncoder encoder) {
